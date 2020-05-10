@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/afa4fc3610.js" crossorigin="anonymous"></script>
+    <title>İLETİŞİM</title>
+    
+    <link rel="stylesheet" href="iletisim.css">
+    
+    
+    
+ 
+    <script type="text/javascript">
+		function validateForm() 
+		{
+			var x = document.forms["myForm"]["fname"].value;
+			if (x == "") 
+			{
+				alert("Ad-Soyad Giriniz");
+				return false;
+			}
+			
+			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			var email = document.getElementById("email").value;
+				if(reg.test(email) == false) 
+			{
+				alert('Hatalı Mail Formatı!');
+				return false;
+			}
+			
+			var y = document.forms["myForm"]["topic"].value;
+			if (y == "") 
+			{
+				alert("Hatalı içerik");
+				return false;
+			}
+			
+			var z = document.forms["myForm"]["textArea"].value;
+			if (z == "") 
+			{
+				alert("Hatalı içerik");
+				return false;
+			}		
+		}
+		
+		
+	</script>
+</head>
+<body>
+   
+   <nav>
+       <div class="container">
+           <div id="nav-links" class="responsive">
+               <ul class="text-uppercase">
+                   <li class="nav-items" >
+                        <a href="#" class="nav-icon">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                   </li>
+                   <li class="nav-items">
+                       <a href="../index.html">HAKKIMDA</a>
+                   </li>
+                   <li class="nav-items ">
+                       <a href="../ÖZGEÇMİŞ/ozgecmis.html">ÖZGEÇMİŞ</a>
+                   </li>
+                   <li class="nav-items ">
+                       <a href="../ŞEHRİM/sehrim.html">ŞEHRİM</a>
+                   </li>
+                   <li class="nav-items ">
+                       <a href="../TAKIMIMIZ/takımımız.html">TAKIMIMIZ</a>
+                   </li>
+                   <li class="nav-items ">
+                       <a href="#">İLETİŞİM</a>
+                   </li>
+                   <li class="nav-items ">
+                       <a href="../GİRİŞ/giris.php">GİRİŞ</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+    </nav>
+    
+    <section>
+        <div class="container section-options rounded">
+            <div class="contact">
+                <form name="myForm" action="iletisim.html " onsubmit="return validateForm()" method="post ">
+                    <h2>İLETİŞİM</h2>
+                    
+                    <input  class="form-controls" placeholder="Adınız Soyadınız" type="text"
+                    name="fname" id="ad"  autofocus><br>
+
+                    <input class="form-controls" placeholder="E-Posta Adresiniz" type="text" id="email" maxlength="50" ><br>
+                    
+                    <input class="form-controls" placeholder="Konu" type="text" name="topic"><br>
+
+                    <textarea i class="form-controls message-area" placeholder="Lütfen Mesajınızı Buraya Yazın.." name="textArea" ></textarea><br>
+                    
+                    <button class="form-controls" name="submit" type="submit" id="submit">GÖNDER</button><br>
+                    
+                    <button class="form-controls" name="reset" type="reset" id="submit">TEMİZLE</button><br>               
+                </form>
+            </div>
+        </div>
+    </section>
+   
+   
+                       
+   <footer>
+        <div id="social">
+            <a href="https://github.com/mertmutlu16/WEB_TEKNOLOJILERI_PROJE" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/mutlummert/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/explore" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://tr.linkedin.com/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p>
+            Copyright © 2020 by MERT MUTLU
+        </p>
+    </footer>
+   
+   
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $('.nav-icon').click(function() {
+            $('#nav-links').toggleClass("responsive");
+            return false;
+        })
+    </script>
+
+    
+</body>
+</html>
